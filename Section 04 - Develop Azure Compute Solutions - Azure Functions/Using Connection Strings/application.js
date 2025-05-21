@@ -9,8 +9,8 @@ app.http('appFunction', {
         var sqlconnection = mysql.createPool({
             host: process.env.hostname,               // <-------------------
             user: "myadmin",
-            password: "Admin10@---",
-            database: process.env.dbpassword          // <-------------------
+            password: process.env.dbpassword,         // <-------------------
+            database: "appdb"
           });         
 
          
