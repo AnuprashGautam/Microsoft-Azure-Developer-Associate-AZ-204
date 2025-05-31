@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anupr\\Downloads\\DotNet Project\\learningapp\\learningapp.csproj",
+      "projectUniqueName": "D:\\Coding\\Microsoft-Azure-Developer-Associate-AZ-204\\Section 02 - Develop Azure Compute Solutions - Azure Virtual Machines\\learningapp\\learningapp.csproj",
       "projectName": "learningapp",
-      "projectPath": "C:\\Users\\anupr\\Downloads\\DotNet Project\\learningapp\\learningapp.csproj",
+      "projectPath": "D:\\Coding\\Microsoft-Azure-Developer-Associate-AZ-204\\Section 02 - Develop Azure Compute Solutions - Azure Virtual Machines\\learningapp\\learningapp.csproj",
       "packagesPath": "C:\\Users\\anupr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anupr\\Downloads\\DotNet Project\\learningapp\\obj\\",
+      "outputPath": "D:\\Coding\\Microsoft-Azure-Developer-Associate-AZ-204\\Section 02 - Develop Azure Compute Solutions - Azure Virtual Machines\\learningapp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\anupr\\AppData\\Roaming\\NuGet\\NuGet.Config"
