@@ -1,0 +1,11 @@
+az group create --location "North Europe" --name "web-grp"
+
+az appservice plan create -n "learningplan2000" -g "web-grp" --sku F1
+
+az webapp create -n "learnignapp5000" -g "app-grp" --plan "learningplan2000"
+
+az group create --name "web-grp" --location "North Europe"
+
+az appservice plan create --name "learningplan2000" --resource-group "web-grp" --sku F1
+
+az webapp create --name "learningapp5000" --resource-group "web-grp" --plan "learningplan2000"
