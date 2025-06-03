@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learningapp
+spec:
+  selector:
+    matchLabels:
+      app: learningapp
+  template:
+    metadata:
+      labels:
+        app: learningapp
+    spec:
+      containers:
+      - image: azurecontainerregistry86597.azurecr.io/learningapp:latest
+        name: learningapp
+        ports:
+        - containerPort: 8080
+          name: learningapp        
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysqlinstance
+spec:
+  selector:
+    matchLabels:
+      app: mysqlinstance
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mysqlinstance
+    spec:
+      containers:
+      - image: azurecontainerregistry86597.azurecr.io/mysql-image:latest
+        name: mysqlinstance
+        ports:
+        - containerPort: 3306
+          name: mysqlinstance     
