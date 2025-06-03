@@ -1,0 +1,37 @@
+apiVersion: 2025-06-03
+location: northeurope
+name: appContainerGroup
+properties:
+  containers:
+    - name: sqlinstance
+      properties:
+        image: azurecontainerregistry86597.azurecr.io/mysql-image:latest
+        ports:
+          - port: 3306
+            protocol: TCP
+        resources:
+          requests:
+            cpu: 1
+            memoryInGb: 1.5
+    - name: learningapp
+      properties:
+        image: azurecontainerregistry86597.azurecr.io/learningapp:latest
+        ports:
+          - port: 8080
+            protocol: TCP
+        resources:
+          requests:
+            cpu: 1
+            memoryInGb: 1.5
+  osType: Linux
+  ipAddress:
+    type: Public
+    ports:
+      - protocol: tcp
+        port: 8080
+  imageRegistryCredentials:
+  - server: azurecontainerregistry86597.azurecr.io
+    username: azurecontainerregistry86597
+    password: 2eJLqyCNf+kX3ITT31M02p2obJ352LlAV1QABAQ8VZ+ACRA4TgZb
+tags: null
+type: Microsoft.ContainerInstance/containerGroups
