@@ -17,3 +17,7 @@ $PropertiesObject = @{
 Set-AzResource -PropertyObject $PropertiesObject -ResourceGroupName $ResourceGroupName `
 -ResourceType Microsoft.Web/sites/slots/sourcecontrols `
 -ResourceName $AppName/staging/web -ApiVersion 2015-08-01 -Force
+
+# Script for switching between the prodution and staging slot.
+
+Switch-AzWebAppSlot -Name $AppName -ResourceGroupName $ResourceGroupName -SourceSlotName "staging" -DestinationSlotName "production"
